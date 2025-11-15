@@ -1,14 +1,15 @@
+import { BottomNavProps, FooterProps, MainNavWidgetProps } from "@orderly.network/ui-scaffold";
+import { Flex, LeaderboardActiveIcon, LeaderboardInactiveIcon, MarketsActiveIcon, MarketsInactiveIcon, PortfolioActiveIcon, PortfolioInactiveIcon, TradingActiveIcon, TradingInactiveIcon, cn, useScreen } from "@orderly.network/ui";
+import { OrderlyActiveIcon, OrderlyIcon } from "../components/icons/orderly";
+import { getRuntimeConfig, getRuntimeConfigBoolean, getRuntimeConfigNumber } from "./runtime-config";
+
+import { AppLogos } from "@orderly.network/react-app";
+import CustomLeftNav from "@/components/CustomLeftNav";
+import { Link } from "react-router-dom";
+import { TradingPageProps } from "@orderly.network/trading";
 import { useMemo } from "react";
 import { useTranslation } from "@orderly.network/i18n";
-import { TradingPageProps } from "@orderly.network/trading";
-import { BottomNavProps, FooterProps, MainNavWidgetProps } from "@orderly.network/ui-scaffold";
-import { AppLogos } from "@orderly.network/react-app";
-import { OrderlyActiveIcon, OrderlyIcon } from "../components/icons/orderly";
 import { withBasePath } from "./base-path";
-import { PortfolioActiveIcon, PortfolioInactiveIcon, TradingActiveIcon, TradingInactiveIcon, LeaderboardActiveIcon, LeaderboardInactiveIcon, MarketsActiveIcon, MarketsInactiveIcon, useScreen, Flex, cn } from "@orderly.network/ui";
-import { getRuntimeConfig, getRuntimeConfigBoolean, getRuntimeConfigNumber } from "./runtime-config";
-import { Link } from "react-router-dom";
-import CustomLeftNav from "@/components/CustomLeftNav";
 
 interface MainNavItem {
   name: string;
@@ -308,7 +309,7 @@ export const useOrderlyConfig = () => {
           brandColor: "rgba(255, 255, 255, 0.98)",
           // ref
           refLink: typeof window !== 'undefined' ? window.location.origin : undefined,
-          refSlogan: getRuntimeConfig('VITE_ORDERLY_BROKER_NAME') || "Orderly Network",
+          refSlogan: getRuntimeConfig('VITE_ORDERLY_BROKER_NAME') || "Dead y00ts DEX",
         },
       },
     };
